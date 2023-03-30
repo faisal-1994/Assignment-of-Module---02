@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<body style="background: url(images/OIP2.jpg); background-repeat: no-repeat;
+background-position: center;
+background-size: cover;	 margin-top: 45px; margin-left:35%;">
+   
+    <form action="" style="background: url(images/OIP.jpg);  width: 300px; padding: 70px 60px 50px 60px;;">
+        
+
+    <label style="color: white;">WeightInput</label>
+
+    <input style="background-color: rgb(36, 33, 33); color: white; height: 25px;" type="text" placeholder="input your weight in kg"><br><br><br>
+
+    <label style="color: white;">HeightInput</label>
+
+    <input style="  background-color: rgb(51, 47, 47); color: white; height: 25px; "  type="text" placeholder="input your height in meter"><br><br><br>
+
+    <button  onclick="BMI ()" style="margin-left: 38%; padding-top: 2%; padding-bottom: 2%; background-color: rgb(65, 55, 55); color: white;">CalculateBtn </button>
+  	
+    </form>
+
+
+    <script>
+        function BMI (num1,num2){ 
+                
+        var num1=document.getElementsByTagName("input")[0].value;
+        var num2=document.getElementsByTagName("input")[1].value;
+    
+        var num3=parseFloat(num1)/parseFloat(num2)**2;
+       
+         if (num3<18.5) {
+
+                 document.write(num3 + ':You are Underweight');
+            }
+            else if (num3>=18.5 && num3<25){
+
+                document.write(num3 + ':Your have Normal weight') ;
+            }
+            else if (num3>=25 && num3<30){
+                
+                document.write(num3 + ' :Your are Overweight') ;
+            }
+            else if ( num3<30){
+                
+                document.write(num3 + ':Your have Obesity') ;
+            }
+     
+        };
+
+        
+
+    </script>
+    
+</body>
+</html>
